@@ -14,11 +14,13 @@ body
 
 nav
 {
+    position: sticky;
+    top: 0;
+    background-color: ghostwhite;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: .75rem 7.5rem;
-    border: 1px solid lightgray;
 }
 
 nav ul

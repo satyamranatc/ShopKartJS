@@ -1,0 +1,55 @@
+#header
+{
+    margin: 20px 0;
+    padding: 8px 16px;
+
+}
+
+#ProductContainer
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: .75rem;
+    padding: 20px 40px;
+}
+
+.Card
+{
+    height: 400px;
+    overflow: hidden;
+    background-color: ghostwhite;
+    box-shadow: 0px 2px 2px lightgray;
+    border-radius: 11px;
+}
+
+.Card img
+{
+    height: 60%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.Card h2
+{
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.Card p
+{
+    font-size: 14px;
+    color: darkgrey;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.Card button
+{
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 11px;
+}
