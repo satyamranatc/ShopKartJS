@@ -1,0 +1,46 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: sans-serif;
+    background-color: white;
+    color: black;
+}
+
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .75rem 7.5rem;
+    border: 1px solid lightgray;
+}
+
+nav ul
+{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.75rem;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+nav ul li:hover
+{
+    color: rgb(89, 88, 88);
+}
+nav ul li:active
+{
+    transform: scale(0.96);
+}

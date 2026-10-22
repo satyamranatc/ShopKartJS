@@ -1,0 +1,37 @@
+#heroSection
+{
+    background-color: ghostwhite;
+    color: black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 60vh;
+}
+
+#heroSection h1
+{
+    font-size: 56px;
+    margin-bottom: 20px;
+}
+#heroSection h3
+{
+    font-size:26px;
+    margin-bottom: 10px;
+}
+#heroSection p
+{
+    font-size:18px;
+    color: gray;
+    width: 70%;
+    margin-bottom: 20px;
+}
+#heroSection button
+{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 22px;
+}
