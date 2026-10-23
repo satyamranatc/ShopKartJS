@@ -1,37 +1,141 @@
-#heroSection
-{
-    background-color: ghostwhite;
-    color: black;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 60vh;
+/* ==========================================================================
+   ShopKart - Home Page Styles (home.css)
+   ========================================================================== */
+
+#heroSection {
+  position: relative;
+  min-height: calc(88vh - 65px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(3rem, 8vw, 6rem) 1.5rem;
+  background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 50% 18%, rgba(37, 99, 235, 0.08) 0%, transparent 55%),
+    radial-gradient(circle at 85% 85%, rgba(226, 232, 240, 0.6) 0%, transparent 45%),
+    radial-gradient(circle at 15% 75%, rgba(37, 99, 235, 0.04) 0%, transparent 40%);
+  overflow: hidden;
 }
 
-#heroSection h1
-{
-    font-size: 56px;
-    margin-bottom: 20px;
+/* Subtle decorative blur aura behind hero */
+#heroSection::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(600px, 90vw);
+  height: 250px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(147, 197, 253, 0.15));
+  filter: blur(80px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
 }
-#heroSection h3
-{
-    font-size:26px;
-    margin-bottom: 10px;
+
+#heroSection center {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
 }
-#heroSection p
-{
-    font-size:18px;
-    color: gray;
-    width: 70%;
-    margin-bottom: 20px;
+
+/* Badge styling for subtitle */
+#heroSection h3 {
+  order: -1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-primary);
+  background-color: var(--accent-subtle);
+  border: 1px solid var(--accent-border);
+  padding: 0.4rem 1.15rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
 }
-#heroSection button
-{
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 22px;
+
+/* Hero Main Title */
+#heroSection h1 {
+  font-size: clamp(2.5rem, 6vw + 0.5rem, 4.25rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  background: linear-gradient(180deg, #0f172a 20%, #334155 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: 20ch;
+}
+
+/* Hero Description Paragraph */
+#heroSection p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 580px;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+/* Primary Hero CTA Button */
+#heroSection button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-btn);
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 0.95rem 2.5rem;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.25), 0 2px 6px -1px rgba(15, 23, 42, 0.15);
+  transition: transform var(--transition-normal), background-color var(--transition-fast), box-shadow var(--transition-normal);
+}
+
+#heroSection button:hover {
+  background-color: var(--dark-btn-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -2px rgba(15, 23, 42, 0.35), 0 4px 10px -2px rgba(15, 23, 42, 0.2);
+}
+
+#heroSection button:active {
+  transform: scale(0.97) translateY(0);
+  box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  #heroSection {
+    min-height: calc(80vh - 60px);
+    padding: 2.5rem 1.25rem;
+  }
+
+  #heroSection h1 {
+    margin-bottom: 1rem;
+  }
+
+  #heroSection p {
+    margin-bottom: 1.75rem;
+  }
+
+  #heroSection button {
+    width: 100%;
+    max-width: 280px;
+    padding: 0.85rem 1.75rem;
+    font-size: 0.975rem;
+  }
 }
